@@ -4,6 +4,7 @@ version: '3'
 
 networks:
   inception:
+    name: inception
     driver: bridge
 
       ##### VOLUMES ######
