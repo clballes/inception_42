@@ -2,21 +2,12 @@
 
 echo "Starting the WordPress configuration..."
 
-# Sleep for 10 seconds to ensure MariaDB has started
-#sleep 10
-
 # Check if wp-config.php exists
 if [ ! -f "/var/www/html/wp-config.php" ];
 then
-    # Create directory 
-    #mkdir /var/www/
-    #mkdir /var/www/html
     cd /var/www/html
 
     wp core download --allow-root
-    # Move the sample config file
-    #mv /var/www/html/wp-config-sample.php /var/www/html/wp-config.php
-
     # Create the wp-config.php file using wp-cli with default values
 	wp config create --allow-root \
 	    --dbname=$SQL_DATABASE \

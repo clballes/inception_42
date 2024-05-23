@@ -10,7 +10,6 @@ RUN apt-get update && \
 
 RUN   openssl req -new -newkey rsa:2048 -sha256 -days 365 -x509 -nodes -out /etc/ssl/certs/clballes.crt -keyout /etc/ssl/certs/clballes.key -subj "/C=ES/ST=Barcelona/L=Barcelona/O=clballes.42.f/OU=42/CN=clballes"
 
-#RUN cat /etc/ssl/clballes.csr /etc/ssl/clballes.key > /etc/ssl/clballes.pem
 # Copy nginx configuration file
 COPY conf/nginx.conf /etc/nginx/nginx.conf
 
