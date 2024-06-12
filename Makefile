@@ -3,10 +3,10 @@ NC := \033[0m
 BLUE := \033[0;34m
 
 all:
-	@docker-compose -f ./srcs/docker-compose.yml up -d
+	@docker compose -f ./srcs/docker-compose.yml up --detach --build
 
 down:
-	@docker-compose -f ./srcs/docker-compose.yml down
+	@docker compose -f ./srcs/docker-compose.yml down
 
 
 status:
@@ -39,7 +39,7 @@ clean:
 		@echo "$(GREEN)Cleanup complete.$(NC)"
 
 
-fclean: clean prune
+fclean: clean
 	sudo rm -rf /home/clballes/data/wordpress/*
 	sudo rm -rf /home/clballes/data/mariadb/*
 

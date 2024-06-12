@@ -27,7 +27,7 @@ RUN chmod +x /usr/local/bin/wp-setup.sh
 
 EXPOSE 9000
 
-ENTRYPOINT ["/usr/local/bin/wp-setup.sh"]
+CMD ["/usr/local/bin/wp-setup.sh"]
 
 # CMD to start wp in the foreground
 #CMD ["php-fpm7.4", "-F"]

@@ -1,13 +1,11 @@
-[mysqld]
-datadir = /var/lib/mysql
-socket  = /var/run/mysqld/mysqld.sock
-port = 3306
-user = mysql
-basedir=/usr
+[mariadbd]
 datadir=/var/lib/mysql
+socket=/var/run/mysqld/mysqld.sock
+port=3306
+user=mysql
+basedir=/usr
 tmpdir=/tmp
 lc-messages-dir=/usr/share/mysql
 bind-address=0.0.0.0
-pid-file = /var/run/mysqld/mysqld.pid
-log_error = /var/log/mysql/error.log
-
+pid-file=/var/run/mysqld/mysqld.pid
+log_error=/var/log/mysql/error.log
